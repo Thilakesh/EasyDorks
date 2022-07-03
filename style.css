@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  /* font: normal 75% Arial, Helvetica, sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+  position: relative;
+  z-index: -1 !important;
+} /* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+.mainPageWrpr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cstmInpt {
+  height: 50px;
+  width: 100%;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+.cstmInpt:focus {
+  outline: none;
+}
+
+.cstmInpt::placeholder {
+  color: white;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+.pgListWrpr {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.pgListWrpr a {
+  margin-bottom: 10px;
+}
+
+.pgListWrpr ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 30px;
+}
+
+.section.grdBackWrpr {
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  ) !important;
+}
+
+.section.grdBackWrpr .pgListWrpr{
+    background: rgba(0, 0, 0, 0.318);
+    max-width: 80vw;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.inptFrmWrpr{
+    position: relative;
+}
+
+
+.inptFrmWrpr .material-icons{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    z-index: 9999;
+    cursor: pointer;
+}

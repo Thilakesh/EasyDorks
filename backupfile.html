@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" />
+    <title>Bug Bounty Helper</title>
+    <meta name="author" content="Giri" />
+    <meta name="referrer" content="never" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merienda+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://unpkg.com/fullpage.js/dist/fullpage.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+      body {
+        background-image: url(../Dorks/bg1.png);
+        color: #fff;
+        font-size: 14pt;
+        font-family: "Merienda One";
+        font-weight: bold;
+        padding: 0px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+
+      .row {
+        padding: 30px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      canvas {
+        height: 100vh;
+        z-index: -10;
+        position: fixed;
+        top: 0px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #da4932;
+      }
+      hr {
+        border: 2;
+        width: 50%;
+      }
+
+      input {
+        overflow: hidden;
+        color: #fff;
+        background: transparent;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border: 1px solid;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        height: 32px;
+        padding: 4px 16px;
+      }
+
+      .section {
+        text-align: center;
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="particles-js">
+      <div
+        style="
+          font-family: Merienda One;
+          text-align: center;
+          font-size: 25pt;
+          text-shadow: 0 0 6px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff0000;
+          color: #fff;
+        "
+      >
+        Bug Bounty Helper<br />
+      </div>
+      <br />
+      <div onkeypress="check_submit(event)">
+        <form
+          novalidate="novalidate"
+          id="tool-form"
+          role="form"
+          method="GET"
+          action=""
+          target="response-frame"
+        >
+          <input name="p" value="tool" type="hidden" />
+          <input name="t" value="10" type="hidden" />
+          <input name="act" value="exec" type="hidden" />
+
+          <div style="text-align: center">
+            <b>Target Domain:</b>
+
+            <input
+              id="target"
+              name="target"
+              placeholder="site.com"
+              autofocus=""
+              type="text"
+            /><br />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

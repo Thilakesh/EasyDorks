@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" />
+    <title>Easy Dorks</title>
+    <meta name="author" content="Giri" />
+    <meta name="referrer" content="never" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merienda+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://unpkg.com/fullpage.js/dist/fullpage.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <style>
+      body {
+        background-image: url(../Dorks/bg1.png);
+        color: #fff;
+        font-size: 14pt;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        padding: 0px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+
+      .row {
+        padding: 30px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      canvas {
+        height: 100vh;
+        z-index: -10;
+        position: fixed;
+        top: 0px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #da4932;
+      }
+      hr {
+        border: 2;
+        width: 50%;
+      }
+
+      input {
+        overflow: hidden;
+        color: #fff;
+        background: transparent;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border: 1px solid;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        height: 32px;
+        padding: 4px 16px;
+      }
+
+      .section {
+        text-align: center;
+        font-size: 3em;
+      }
+
+      .fp-warning,
+      .fp-watermark {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section">
+        <div id="particles-js" class="mainPageWrpr">
+          <div>
+            <div style="text-align: center; font-size: 60px; color: #fff">
+              Easy Dorks
+            </div>
+            <div onkeypress="check_submit(event)">
+              <form
+                novalidate="novalidate"
+                id="tool-form"
+                role="form"
+                method="GET"
+                action=""
+                target="response-frame"
+              >
+                <input name="p" value="tool" type="hidden" />
+                <input name="t" value="10" type="hidden" />
+                <input name="act" value="exec" type="hidden" />
+
+                <div style="text-align: center" class="inptFrmWrpr">
+                  <input
+                    class="cstmInpt"
+                    id="target"
+                    name="target"
+                    placeholder="Enter Target Domain: 'site.com' And Scroll Down"
+                    autofocus=""
+                    type="text" 
+					size="80"
+                  />
+                  <span class="material-icons" onclick="check_submit(event)">search</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section grdBackWrpr">
+        <div class="row pgListWrpr">
+          <div class="column">
+            <div style="text-align: center">
+              <div style="display: inline-block; text-align: left">
+                <ul>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(1)"
+                      >Directory listing vulnerabilities</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(2)"
+                      >Exposed Configuration files</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(3)"
+                      >Exposed Database files</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(10)">Find WordPress</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(4)">Exposed log files</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(5)">Backup and old files</a>
+                  </li>
+                  <li>
+                    🐱‍💻 <a href="#" onclick="google_it(6)">Login pages</a>
+                  </li>
+                  <li>
+                    🐱‍💻 <a href="#" onclick="google_it(7)">SQL errors</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(8)"
+                      >Publicly exposed documents</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻 <a href="#" onclick="google_it(9)">phpinfo()</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(11)">Finding Backdoors</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(12)"
+                      >Install / Setup files</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(13)">Open Redirects</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(14)">Apache STRUTS RCE</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(15)"
+                      >Find Pastebin entries</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(16)"
+                      >Employees on LINKEDIN</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(17)"
+                      >.htaccess sensitive files</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(18)">Find Subdomains</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div style="text-align: center">
+              <div style="display: inline-block; text-align: left">
+                <ul>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(19)">Find Sub-Subdomains</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(20)">Find WordPress #2</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(33)"
+                      >Find WordPress [Wayback Machine]</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(21)">Search in GITHUB</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(31)"
+                      >Search in OpenBugBounty</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(32)">Search in Reddit</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(22)">Test CrossDomain</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(23)">Check in ThreatCrowd</a>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(24)"
+                      >Find .SWF file (Google)</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(25)"
+                      >Find .SWF file (Yandex)</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(26)"
+                      >Search SWF in WayBack Machine</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(27)"
+                      >Search in WayBack Machine #2</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(28)"
+                      >Search in WayBack Machine #3</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(29)"
+                      >Search in WayBack Machine [List/All]</a
+                    >
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(30)">Check in crt.sh</a>
+                  </li>
+                  <li>
+                    🐱‍💻 Check in CENSYS
+                    <u><a href="#" onclick="google_it(34)">[IP4]</a></u> |
+                    <u><a href="#" onclick="google_it(35)">[DOMAINS]</a></u> |
+                    <u><a href="#" onclick="google_it(36)">[CERTS]</a></u>
+                  </li>
+                  <li>
+                    🐱‍💻
+                    <a href="#" onclick="google_it(37)">Search in SHODAN</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery1.js"></script>
+    <script src="jquery.js"></script>
+
+    <script src="../particles.min.js"></script>
+
+    <script src="bg.js"></script>
+
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+    <script>
+      function check_submit(e) {
+        if (e && e.keyCode == 13 && e.target.type != "textarea") {
+          e.preventDefault();
+          e.defaultPrevented = true;
+          let url = $("#target").val();
+          if (url) {
+            fullpage_api.moveTo('page2', 1);
+          }
+          // if ($("#tool-form").valid() == true) {
+          //   if ($("#security-check").is(":visible") == true) {
+          //     document.getElementById("tool-form").submit();
+          //   }
+          // }
+        }
+      }
+    </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "../www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-100953906-1", "auto");
+      ga("send", "pageview");
+    </script>
+
+    <!-- <script>
+      document
+        .getElementById("tool-form")
+        .setAttribute("onsubmit", "return false");
+      check_submit = function (event) {};
+    </script> -->
+    <script>
+      function google_it(type) {
+        site = document.getElementById("target").value;
+        if (!site) {
+            fullpage_api.moveTo('page1', 1);
+            return
+          }
+        if (site.indexOf("://") > 0) {
+          site = site.substr(site.indexOf("://") + 3);
+        }
+        url = "https://www.google.com/search?q=";
+        url += "site:" + site;
+
+        switch (type) {
+          case 1:
+            url += "+intitle:index.of";
+            break;
+          case 2:
+            url +=
+              "+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:txt+|+ext:ora+|+ext:ini";
+            break;
+          case 3:
+            url += "+ext:sql+|+ext:dbf+|+ext:mdb";
+            break;
+          case 4:
+            url += "+ext:log";
+            break;
+          case 5:
+            url += "+ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup";
+            break;
+          case 6:
+            url += "+inurl:login";
+            break;
+          case 7:
+            url +=
+              '+intext:"sql+syntax+near"+|+intext:"syntax+error+has+occurred"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()"';
+            break;
+          case 8:
+            url +=
+              "+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv";
+            break;
+          case 9:
+            url += '+ext:php+intitle:phpinfo+"published+by+the+PHP+Group"';
+            break;
+          case 10:
+            url +=
+              "+inurl:wp-+|+inurl:wp-content+|+inurl:plugins+|+inurl:uploads+|+inurl:themes+|+inurl:download";
+            break;
+          case 11:
+            url +=
+              "+inurl:shell+|+inurl:backdoor+|+inurl:wso+|+inurl:cmd+|+shadow+|+passwd+|+boot.ini+|+inurl:backdoor";
+            break;
+          case 12:
+            url +=
+              "+inurl:readme+|+inurl:license+|+inurl:install+|+inurl:setup+|+inurl:config";
+            break;
+          case 13:
+            url +=
+              "+inurl:redir+|+inurl:url+|+inurl:redirect+|+inurl:return+|+inurl:src=http+|+inurl:r=http";
+            break;
+          case 14:
+            url += "+ext:action+|+ext:struts+|+ext:do";
+            break;
+          case 15:
+            url = "https://www.google.com/search?q=site:pastebin.com+" + site;
+            break;
+          case 16:
+            url =
+              "https://www.google.com/search?q=site:linkedin.com+employees+" +
+              site;
+            break;
+          case 17:
+            url +=
+              '+inurl:"phpinfo.html"+|+inurl:".htaccess"+|+inurl:"/.git"+' +
+              site +
+              " -github";
+            break;
+          case 18:
+            url = "https://www.google.com/search?q=site:*." + site;
+            break;
+          case 19:
+            url = "https://www.google.com/search?q=site:*.*." + site;
+            break;
+          case 20:
+            url += "+inurl:wp-content+|+inurl:wp-includes";
+            break;
+          case 21:
+            url = 'https://github.com/search?q="*.' + site + '"&type=host';
+            break;
+          case 22:
+            url = "http://" + site + "/crossdomain.xml";
+            break;
+          case 23:
+            url = "http://threatcrowd.org/domain.php?domain=" + site;
+            break;
+          case 24:
+            url = "https://www.google.com/search?q=+inurl:" + site + "+ext:swf";
+            break;
+          case 25:
+            url =
+              "https://yandex.com/search/?text=site:" + site + "%20mime:swf";
+            break;
+          case 26:
+            url =
+              "https://web.archive.org/cdx/search?url=" +
+              site +
+              "/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=urlkey:.*swf&limit=100000&_=1507209148310";
+            break;
+          case 27:
+            url =
+              "https://web.archive.org/cdx/search?url=" +
+              site +
+              "/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000&_=1507209148310";
+            break;
+          case 28:
+            url = "https://web.archive.org/web/*/(." + site + ")";
+          case 29:
+            url = "https://web.archive.org/web/*/" + site + "/*";
+            break;
+          case 30:
+            url = "https://crt.sh/?q=%25." + site;
+            break;
+          case 31:
+            url =
+              "https://www.openbugbounty.org/search/?search=" +
+              site +
+              "&type=host";
+            break;
+          case 32:
+            url = "https://www.reddit.com/search/?q=" + site + "&source=recent";
+            break;
+          case 33:
+            url =
+              "http://wwwb-dedup.us.archive.org:8083/cdx/search?url=" +
+              site +
+              "/&matchType=domain&collapse=digest&output=text&fl=original,timestamp&filter=urlkey:.*wp[-].*&limit=1000000&xx=";
+            break;
+          case 34:
+            url = "https://censys.io/ipv4?q=" + site;
+            break;
+          case 35:
+            url = "https://censys.io/domain?q=" + site;
+            break;
+          case 36:
+            url = "https://censys.io/certificates?q=" + site;
+            break;
+          case 37:
+            url = "https://www.shodan.io/search?query=" + site;
+            break;
+        }
+        window.open(url);
+      }
+    </script>
+
+    <script>
+      new fullpage("#fullpage", {
+        licenseKey: "YOUR KEY HERE",
+        anchors: ['page1', 'page2']
+        // sectionsColor: ["linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);", "#ADD8E6"],
+      });
+    </script>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 1420.4657549380909,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "triangle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.06313181133058181,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 11.83721462448409,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+
+    <div
+      style="
+        font-family: Merienda One;
+        text-align: center;
+        padding: 7px 0;
+        font-size: 20px;
+      "
+    >
+      <img src="" />
+    </div>
+  </body>
+</html>
